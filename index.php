@@ -25,7 +25,7 @@ if ($text == "/start") {
 } else if ($text == "/generate") {
  $a = file_get_contents("https://arugaz.herokuapp.com/api/randomquotes");
  $a = json_decode($a);
- $a = $a->quotes
+ $a = $a->quotes;
     file_get_contents($apiLink . "sendMessage?chat_id=$chat_id&text=$a");
     return false;
 }
